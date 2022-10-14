@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+    background-color: black;
+}
+#title{
+    background-color: gray;
+    color:black;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 40px;
+    font-family: serif;
+}
+
+
+#body1{
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-color: black;
+}
+
+#bodyh3{
+   background-color: grey;
+   padding-left: 5%;
+   padding-right: 5%;
+   font-style:oblique;
+   text-align: center;
+   font-size:40px;
+   color:black;
+   font-family: serif;
+}
+
+    #mental_health{
+        background-color: lightgrey;
+    }
+
+    #gender{
+        background-color: lightgrey;
+    }
+
+#d1{
+    background-color: lightgrey;
+    text-align: left;
+    margin-left: 5%;
+    padding-top: 5%;
+}
+#d2{
+    background-color: lightgrey;
+    text-align: left;
+}
+#d3{
+    background-color: lightgrey;
+    text-align: left;
+}
+
+#body2 {
+    text-align: center;
+}
+
+    #race{
+        background-color: lightgrey;
+    }
+
+    #body2h3{
+        color: black; 
+    }
+
+    #race_desc{
+        background-color: lightgrey;
+    }
+
+
+
+#body3{
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#map2_sec{
+    background-color: lightgrey;
+    text-align: left;
+
+}
+#map1_sec{
+    background-color: lightgrey;
+}
+
+#body4{
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#race_desc{
+    margin-left: 5%;
+    text-align: left;
+}
+ 
+#footer{
+    background-color: lightgrey;
+    margin-left: 5%;
+    margin-right: 5%;
+}

@@ -1,0 +1,35 @@
+{
+    "data": {
+      "values": [
+        {"category": "White", "value": 67},
+        {"category": "Black", "value": 21},
+        {"category": "Unknown", "value": 12},
+        {"category": "Latino", "value": 10},
+        {"category": "Native American/Asian/Other", "value": 14}
+      ]
+    },
+    "transform": [
+      {"joinaggregate": [{"op": "sum", "field": "value", "as": "total"}]}
+    ],
+    "facet": {"column": {"field": "category", "title":null}},
+    "spec": {
+      "layer": [
+        {
+          "mark": {"type": "arc", "innerRadius": 80, "color": "lightgray"},
+          "encoding": {"theta": {"field": "total", "type": "quantitative"}}
+        },
+        {
+          "mark": {"type": "arc", "innerRadius": 80},
+          "encoding": {
+            "theta": {"field": "value", "type": "quantitative"},
+            "color": {"field": "category","legend":null}
+          }
+        },
+        {
+          "mark":{"type":"text", "innerRadius": 80},
+          "encoding":{"text":{"field":"value","type":"quantitative"}}
+        }
+      ],
+      "view": {"stroke": null}
+    }
+  }

@@ -1,0 +1,114 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 313,
+  "resolve": {"scale": {"color": "independent"}},
+  "data": {
+    "url": "data/new_data.csv"
+  },
+
+  "config": {
+    "view": {
+       "stroke": "transparent"
+    }
+  },
+  
+
+
+"layer": [
+  {"mark": "bar",
+  
+  "encoding": {
+    "x": {
+      "field": "Gender",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "domain": false,
+        "grid": false,
+        "ticks": false,
+        "labelAngle": 0}
+
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "Shootings Committed",
+      "axis": {"domain": false, "grid": false, "ticks": false}
+    },
+    "color":{
+      "field": "weapons_obtained_legally",
+      "type": "nominal",
+      "scale":{
+        "domain":[
+          "Yes",
+          "No",
+          "Unknown",
+          "TBD"
+        ],
+        "scheme":"accent"
+      },
+      "legend":{
+        "title":"Weapons Purchased Legally"
+      }
+
+    },
+    "tooltip": [
+      {"field": "Gender","type":"nominal", "title": "Gender"},
+      {"aggregate":"count", "field":"weapons_obtained_legally", "title": "Number of Cases"},
+      {"field": "weapons_obtained_legally", "title": "Weapons Purcahsed Legally"},
+      {"aggregate":"sum","field": "Percentage", "title": "Percentage", "format":".2f" }
+    
+  ]
+  }
+  },
+  {"mark": {
+    "type": "text", 
+    "align":"center", 
+    "dy" : 10
+  },
+  "encoding": {
+    "x": {
+      "field": "Gender",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "domain": false,
+        "grid": false,
+        "ticks": false,
+        "labelAngle": 0}
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "Shootings Committed",
+      "axis": {"domain": false, "grid": false, "ticks": false}
+    },
+    "color":{
+      "field": "weapons_obtained_legally",
+      "type": "nominal",
+      "scale": {
+        "range": ["black"]},
+      "legend" : null
+
+    },
+    "detail": {"aggregate": "count", 
+    "field": "weapons_obtained_legally", 
+    "type": "quantitative"
+    },
+    "text":{"condition": {
+      "test": "datum['Gender'] == 'Male'",
+      "aggregate": "count",
+      "field": "Location", 
+      "type": "quantitative"
+
+    },
+    "value": ""
+  }
+}
+  }
+]
+}
+

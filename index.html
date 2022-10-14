@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js"></script>
+<title>Visualisation 2 </title>
+</head>
+
+
+
+
+<body>
+    <div class = "pure-g" id="header">
+        <div class ="pure-u-1" id = "title"> 
+            <h1> Mass Shootings in USA from 1982-2022 </h1>
+        </div>
+    </div>
+
+    <div class="pure-g" id="body3">
+        <div class="pure-u-2-3" id="map1_sec">
+            <h3 id="bodyh3">Locations of Mass Shootings</h3> 
+            <div id="map1">
+            </div>
+            <div class = "pure-u-1-4" id="d1">
+                Despite America's gunlaws allegedly promoting saftey and protection, the empiracal evidence suggests that it does quite the opposite. <br><br>
+                There have been 100s of shootings over the years but this data set has captured <b>126 mass shootings</b> between 1982-2022 which were the worst. <br> 
+            </div>
+            <div class = "pure-u-1-4" id="d1">
+                Locations such as <b>Florida, California and Texas </b> are some of the more common American states to have mass shootings, and generally they
+                 occur in more <b>heavily populated</b> locations <br><br>
+                The most noteable mass shooting was the <b>Las Vegas Strip Massacare </b>in 2017 which had over 600 victims
+            </div>
+            <div class = "pure-u-1-4" id="d1">
+            <b>84</b> cases involved the <b>legal</b> purchase of a firearm<br><br>
+            <b>79 </b>of these cases involved semi-automatic rifles or handguns <br><br>
+            The majority of mass shootings were conducted by a <b>white male</b> with <b>mental health issues</b>
+           
+            </div>
+        </div>
+
+        <div class="pure-u-1-3" id="map2_sec">
+            <h3 id="bodyh3">Injuries vs Fatalities</h3>
+            <div id="injured_vis"></div>
+            <div class = "pure-u-1-3" id="d1">
+                <br><br> 
+                This dataset classifies victims as someone who was <b> injured </b> or a <b>fatality</b> as a result of the crime<br><br>
+                This visualisation does not include the<b> Las Vegas Strip Massacare</b>
+            </div>
+            <div class = "pure-u-1-3" id="d1">
+                <br><br>
+                The average number of <b>fatalities</b> is <b> 8</b> people <br><br>
+                The average number of <b>injuries</b>  is <b>12</b> people <br><br>
+                There is a linear relation between the two variables
+            </div>
+
+
+           </p>
+        </div>
+    </div>
+
+    <div class="pure-g" id="body1">
+       
+        <div class="pure-u-1-2" id="mental_health">
+            <h3 id="bodyh3">Mental Health</h3>
+            <div id="mental_health_vis"></div>
+            <div class = "pure-u-2-5" id="d1">
+                <b>38%</b> of the cases in the dataset were caused by individuals with mental health issues who were able to legally purchase firearms.
+                This could suggest that it's far too easy to lawfully acquire a firearm. <br><br>
+
+                Regardless of mental health history, the majority of firearms were <b><span style="color: green">obtained lawfully</span></b>, revealing the fallacy that is American gun laws.
+            </div>
+            <div class = "pure-u-2-5" id="d1">
+               <b>1 in 5 Americans</b> will experience a mental illness in a given year. <br><br>
+               <b>1 in 5 children, </b>either currently or at some point during their life, have had a seriously debilitating mental illness. <br><br>
+               <b> 1 in 25 Americans</b> lives with a serious mental illness, such as schizophrenia, bipolar disorder, or major depression.
+            </div>
+            <p> 
+             </p>
+        </div>
+        <div class="pure-u-1-2" id="gender">
+            <h3 id="bodyh3">Gender Split</h3>
+            <div id="gender_vis"></div>
+
+            <div class = "pure-u-2-5" id="d1">
+                Mass shootings in America were almost primarily conducted by <b> Males</b> who were mostly able to obtain the firearms legally<br><br>
+                <b>65%</b> of crimes were <b>men</b> who could legally purchase firearms
+                
+                Only 2 mass shootings were conducted with multiple perpetrators.
+            </div>
+            <div class = "pure-u-2-5" id="d1">
+                There have been 18  <b><span style="color: darkorchid">school</span></b> shootings that are considered a <b>mass shooting</b>, but there are hunderds
+                that had less than three direct victims and aren't captured in this data set. <br><br>
+
+                More than <b>half </b> of American parents wrongly believe their child is unaware of their gun storage location at home. <b>70%</b> of gun related school
+                incidents involved a firearm taken from home, family or relative.
+            </div>
+        </div>
+    </div>
+
+
+<div class="pure-g" id="body4">
+    <div class="pure-u-1" id="race">
+        <h3 id="bodyh3">Race of Perpetrators</h3>
+        <div class="pure-u-3-5" id="race_vis"></div>
+        <div class="pure-u-1-5" id="race_desc">        
+            <b><span style="color: green">White</span></b> Americans are the largest demographic to commit mass shootings at <b>53%</b>, 
+            which coincidentally is the same as their % of the population from 2020 census data. <br><br>
+
+            <b><span style="color: blue">Black</span></b> Americans have contributed to 16% of mass shottings captured in this data setwhich is slightly over their population percentage of 13.6. 
+            Black youths are 5 times more likely to die from gun violence than <b><span style="color: green">White</span></b> Americans <br> <br>
+
+            Almost <b>80%</b> - 19,384 out of 24,576 - of murders and suicides involved guns
+        </div>
+
+    </div>
+
+</div>
+
+<div id="footer">
+    <br>
+</div>
+
+
+
+
+
+    
+
+
+
+</body>
+</html>
